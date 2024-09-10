@@ -3,9 +3,10 @@ import { SxProps, Theme } from "@mui/material/styles";
 
 export const containerSx: SxProps<Theme> = {
   backgroundColor: '#1f2937',
-  height: (theme) => theme.spacing(53),
+  height: {xs: 'auto', sm: (theme) => theme.spacing(53)},
   width: '100vw',
   pt: 8,
+  pb: 8,
   
 };
 
