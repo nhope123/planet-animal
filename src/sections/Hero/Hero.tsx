@@ -1,4 +1,4 @@
-import { Box, SxProps, Theme, Typography } from '@mui/material';
+import { Box, Button, SxProps, Theme, Typography } from '@mui/material';
 import { FC } from 'react';
 import Header from './Header';
 import { containerSx, HeroMainSx, HeroSecondarySx } from './heroStyles';
@@ -27,6 +27,7 @@ const contentSectionSx: SxProps<Theme> = {
   alignItems: 'center',
 };
 
+const BUTTON_TEXT = 'Explore Now';
 const PRIMARY_TEXT = 'Discover the Wild';
 const SECONDARY_TEXT = 'Explore wildlife, learn, and protect our planet’s incredible creatures.';
 const HERO_IMAGE = 'https://images.unsplash.com/photo-1504173010664-32509aeebb62?q=80&w=2254&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D';
@@ -39,6 +40,7 @@ const Hero: FC = () => {
         <Box sx={contentSectionSx}>
           <Typography sx={HeroMainSx}>{PRIMARY_TEXT}</Typography>
           <Typography sx={HeroSecondarySx}>{SECONDARY_TEXT}</Typography>
+          <Button variant='contained' color='primary'>{BUTTON_TEXT}</Button>
         </Box>
         <Box sx={contentSectionSx}>
           <Box alt='hero pic' component={'img'} src={HERO_IMAGE} sx={imageSx} />
